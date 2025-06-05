@@ -20,7 +20,7 @@ Este proyecto proporciona un Sandbox(entorno de prueba) para Wordpress utilizand
 
 ### 1. Clonar el repositorio
 ```bash
-git clone git@github.com:sedici/ojs-sandox.git
+git clone git@github.com:sedici/wordpress-sandbox.git
 ```
 Una vez que hayas clonado el repositorio, dirígete al directorio recién creado:
 ```bash
