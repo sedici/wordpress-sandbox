@@ -1,0 +1,14 @@
+# Ignorar logs y archivos temporales
+*.log
+*.sql
+*.sqlite
+*.zip
+*.tar.gz
+*.gz
+*.tmp
+*.swp
+
+wordpress/
+uploads.ini
+db
+.env
