@@ -86,3 +86,17 @@ Por defecto, el proyecto permite levantar un entorno de wordpress single. Para g
 
 - Una vez hecho esto, para instalar plugins es necesario agregar en `wp-config.php`despues de la linea WP_DEBUG la siguiente linea : 
 	- `define('FS_METHOD', 'direct');`
+
+## Cómo setear variables de PHP
+- Para setear variables de entorno como upload_max_filesize, memory_limit, o post_max_size, se debe crear un archivo uploads.ini y allí agregar los valores de las variables
+
+## Cómo modificar la URL de localhost
+- Crear .env y agregar : `WP_URL=http://DOMINIO.LOCAL`
+-  Mapear el dominio en el archivo hosts
+  - `sudo nano /etc/hosts`
+  - Agregar `127.0.0.1 DOMINIO.LOCAL`
+- Levantar wordpress, modificar `wp-config.php` y agregar :
+  - `define('WP_HOME', 'http://DOMINIO.LOCAL');`
+  - `define('WP_SITEURL', 'http://DOMINIO.LOCAL');`
+- Si se obtiene este error : "Cookies are blocked or not supported by your browser. You must enable cookies to use WordPress."
+  - Lo primero es descartar las cookies residuales de localhost guardadas en tu navegador. Abrir una ventana de incógnito e intentá ingresar. Si en incógnito funciona, simplemente borrá lasrá las cookies y la memoria caché de mi-sitio.local y localhost en la configuración de tu navegador
