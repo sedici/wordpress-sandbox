@@ -22,7 +22,7 @@ services:
     volumes:
       - db_data:/var/lib/mysql
       - ./db/:/docker-entrypoint-initdb.d/
-    command: --max_allowed_packet=32505856      # Set max_allowed_packet to 256M (or any other value)
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci --max_allowed_packet=32505856 # Set max_allowed_packet to 256M (or any other value)
     environment:
       MYSQL_ROOT_PASSWORD: my_db_root_password
       MYSQL_DATABASE: wordpress
